@@ -2,7 +2,7 @@ require 'redmine'
 
 require 'redmine_drafts/hooks'
 
-ActionDispatch::Callbacks.to_prepare do
+Rails.configuration.to_prepare do
   require_dependency 'redmine_drafts/issue_patch'
   require_dependency 'redmine_drafts/issues_controller_patch'
 end
